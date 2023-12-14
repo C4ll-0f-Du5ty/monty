@@ -13,6 +13,7 @@
 #include <fcntl.h>
 #include <dirent.h>
 #include <signal.h>
+#include <stdbool.h>
 
 /**
  * is_numeric - Checks if a string represents a numeric value.
@@ -41,7 +42,6 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	char *line = NULL;
-	size_t len = 0;
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	while (getline(&line, &len, file) != -1)
+	while (fgets(line, sizeof(line), file) != NULL)
 	{
 		line_number++;
 		parse_and_execute_opcode(&stack, line, line_number);
