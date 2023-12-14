@@ -61,8 +61,6 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	char *line = NULL;
-	size_t len = 0;
-	ssize_t read;
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
 
@@ -79,7 +77,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	while ((read = getline(&line, &len, file)) != -1)
+	while (fgets(line, sizeof(line), file) != NULL)
 	{
 		line_number++;
 		parse_and_execute_opcode(&stack, line, line_number);
