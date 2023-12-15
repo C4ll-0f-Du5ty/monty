@@ -4,9 +4,9 @@
  * free_nodes - Frees nodes in the stack.
  * @stack: Pointer to the stack.
  */
-void free_nodes(stack_t **stack)
+void free_nodes(Mstack_t **stack)
 {
-	stack_t *current;
+	Mstack_t *current;
 
 	if (stack == NULL || *stack == NULL)
 		return;
@@ -44,7 +44,7 @@ int is_numeric(const char *str)
  *
  * Return: void
  */
-void parse_and_execute_opcode(stack_t **stack,
+void parse_and_execute_opcode(Mstack_t **stack,
 							  char *line, unsigned int line_number)
 {
 	char *opcode, *arg;

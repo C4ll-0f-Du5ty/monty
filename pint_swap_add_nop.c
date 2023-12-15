@@ -9,7 +9,7 @@
  *
  * Return: void
  */
-void pint(stack_t **stack, unsigned int line_number)
+void pint(Mstack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -27,7 +27,7 @@ void pint(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void swap(stack_t **stack, unsigned int line_number)
+void swap(Mstack_t **stack, unsigned int line_number)
 {
 	int temp;
 
@@ -49,9 +49,9 @@ void swap(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void add(stack_t **stack, unsigned int line_number)
+void add(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
+	Mstack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -72,7 +72,7 @@ void add(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void nop(stack_t **stack, unsigned int line_number)
+void nop(Mstack_t **stack, unsigned int line_number)
 {
 	(void)stack;
 	(void)line_number;

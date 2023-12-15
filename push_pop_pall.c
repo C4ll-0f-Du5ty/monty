@@ -9,9 +9,9 @@
  *
  * Return: void
  */
-void push(stack_t **stack, unsigned int value)
+void push(Mstack_t **stack, unsigned int value)
 {
-	stack_t *new_node = malloc(sizeof(stack_t));
+	Mstack_t *new_node = malloc(sizeof(Mstack_t));
 
 	if (!new_node)
 	{
@@ -36,9 +36,9 @@ void push(stack_t **stack, unsigned int value)
  *
  * Return: void
  */
-void pop(stack_t **stack, unsigned int line_number)
+void pop(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
+	Mstack_t *temp;
 
 	if (*stack == NULL)
 	{
@@ -58,9 +58,9 @@ void pop(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void pall(stack_t **stack, unsigned int line_number)
+void pall(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *current;
+	Mstack_t *current;
 
 	(void)line_number; /*Unused parameter*/
 

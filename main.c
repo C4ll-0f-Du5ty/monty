@@ -1,4 +1,9 @@
 #include "monty.h"
+#define _GNU_SOURCE
+#define _POSIX_C_SOURCE 200809L
+#define __USE_GNU
+#include <stdio.h>
+
 /**
  * main - Entry point for the Monty interpreter
  * @argc: Number of command-line arguments
@@ -9,8 +14,9 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	char *line = NULL;
+	size_t len = 0;
 	unsigned int line_number = 0;
-	stack_t *stack = NULL;
+	Mstack_t *stack = NULL;
 
 	if (argc != 2)
 	{
@@ -25,7 +31,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	while (fgets(line, sizeof(line), file) != NULL)
+	while (getline(&line, &len, file) != -1)
 	{
 		line_number++;
 		parse_and_execute_opcode(&stack, line, line_number);

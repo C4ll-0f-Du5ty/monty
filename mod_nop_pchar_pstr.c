@@ -10,9 +10,9 @@
  *
  * Return: void
  */
-void mod(stack_t **stack, unsigned int line_number)
+void mod(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
+	Mstack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -39,7 +39,7 @@ void mod(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void pchar(stack_t **stack, unsigned int line_number)
+void pchar(Mstack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -63,9 +63,9 @@ void pchar(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void pstr(stack_t **stack, unsigned int line_number)
+void pstr(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *current;
+	Mstack_t *current;
 
 	(void)line_number; /*Unused parameter*/
 

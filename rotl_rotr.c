@@ -9,9 +9,9 @@
  *
  * Return: void
  */
-void rotl(stack_t **stack, unsigned int line_number)
+void rotl(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *first, *last;
+	Mstack_t *first, *last;
 
 	(void)line_number; /*Unused parameter*/
 
@@ -38,9 +38,9 @@ void rotl(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void rotr(stack_t **stack, unsigned int line_number)
+void rotr(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *first, *last;
+	Mstack_t *first, *last;
 
 	(void)line_number; /*Unused parameter*/
 

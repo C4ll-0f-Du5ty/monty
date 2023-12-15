@@ -9,9 +9,9 @@
  *
  * Return: void
  */
-void sub(stack_t **stack, unsigned int line_number)
+void sub(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
+	Mstack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -32,9 +32,9 @@ void sub(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void _div(stack_t **stack, unsigned int line_number)
+void _div(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
+	Mstack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -61,9 +61,9 @@ void _div(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void mul(stack_t **stack, unsigned int line_number)
+void mul(Mstack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
+	Mstack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
